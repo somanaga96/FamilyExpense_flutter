@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "724979527816",
+    "project_id": "familyexpense-eac0c",
+    "storage_bucket": "familyexpense-eac0c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:724979527816:android:64e50fe0496b6fb8a5af3d",
+        "android_client_info": {
+          "package_name": "com.example.familyexpense"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPQ6YKsEQbKRW1fF6GJvAhVsi089H7qm0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
