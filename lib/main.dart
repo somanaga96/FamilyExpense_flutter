@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
         builder: (context, global, child) => MaterialApp(
               theme: global.getTheme(),
               home: SideMenuPage(), // Use SideMenu as the home widget
+              // home: CounterHomePage(), // Use SideMenu as the home widget
             ));
   }
 }

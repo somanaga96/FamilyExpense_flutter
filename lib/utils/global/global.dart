@@ -6,6 +6,19 @@ import '../../entity/transaction_entity.dart';
 
 class Global extends ChangeNotifier {
   List<Trans> _transactionList = [];
+
+   void fetchTransactionList() async {
+    _transactionList.clear();
+    try {
+      TransactionTool tools = TransactionTool();
+      List<Trans> transactions = await tools.fetchTransaction(_selectedDate);
+      _transactionList.addAll(transactions);
+      notifyListeners();
+    } catch (error) {
+      print('Error fetching transactions: $error');
+    }
+  }
+  l̥
   List<Trans> userTransactionList = [];
   String _currentPageTitle = "starting";
 
@@ -115,17 +128,7 @@ class Global extends ChangeNotifier {
     notifyListeners();
   }
 
-  void fetchTransactionList() async {
-    _transactionList.clear();
-    try {
-      TransactionTool tools = TransactionTool();
-      List<Trans> transactions = await tools.fetchTransaction(_selectedDate);
-      _transactionList.addAll(transactions);
-      notifyListeners();
-    } catch (error) {
-      print('Error fetching transactions: $error');
-    }
-  }
+ 
 
   void userTransactionLists(String name) async {
     userTransactionList.clear();

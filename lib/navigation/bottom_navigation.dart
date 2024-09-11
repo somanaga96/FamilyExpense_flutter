@@ -4,11 +4,10 @@ import 'package:provider/provider.dart';
 
 import '../pages/debt.dart';
 import '../pages/home.dart';
-import '../pages/settings.dart';
 import '../utils/global/global.dart';
 
 class BottomNavigation extends StatefulWidget {
-  const BottomNavigation({Key? key}) : super(key: key);
+  const BottomNavigation({super.key});
 
   @override
   State<BottomNavigation> createState() => _BottomNavigationState();
@@ -34,6 +33,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
       builder: (context, global, child) => Scaffold(
         body: screen[_selectedIndex],
         bottomNavigationBar: BottomNavigationBar(
+          
           currentIndex: _selectedIndex,
           selectedItemColor: Colors.blue[800],
           onTap: (index) {
